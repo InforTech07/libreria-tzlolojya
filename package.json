@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node backend/index.js",
+    "start":"node backend/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
