@@ -7,7 +7,7 @@ const {dbConnection} = require('./db/dbConnection.js');
 class Server{
     constructor(){
         this.app = express();
-        this.port = process.env.PORT
+        this.port = 4000
         this.apiUser=`/api/v1/user`;
         this.apiProduct =`/api/v1/product`;
         this.db();
