@@ -1,0 +1,35 @@
+### new product
+POST http://localhost:3000/api/v1/product
+Content-Type: application/json
+
+{
+    "name":"pruba2",
+    "description":"product description2",
+    "imgUrl":"url-image-product2",
+    "amount":10,
+    "price":1.4,
+    "category":"escolares2"
+}
+
+### get products
+GET  http://localhost:3000/api/v1/product
+
+
+
+
+### new product
+PUT  http://localhost:3000/api/v1/product/618064241566137cbad4c0db
+Content-Type: application/json
+
+{
+    "name":"prubaact2",
+    "description":"product description2 act",
+    "imgUrl":"url-image-product2act",
+    "amount":15,
+    "price":1.4,
+    "category":"escolaresact"
+}
+
+
+### delete products
+DELETE http://localhost:3000/api/v1/product/6180671dae6226b9b4b26e5c

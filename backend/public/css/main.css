@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+body{
+    background-color: #0E373F;
+}
+.container-app{
+    font-family: 'Roboto Condensed', sans-serif;   
+}
+.nproduct{
+    cursor: pointer;
+}
+
+.home-sigin{
+    display: grid;
+    padding: 50px;
+    grid-template-columns: 40% 40%;
+    gap: 10%;
+}
+.page-title{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+.page-title h3{
+    color: snow;
+    text-align: center;
+}
+
+
+.container-products{
+    width: 100%;
+    display: grid;
+    padding-left: 20px;
+}
+.container-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    row-gap: 5%;
+}
+/*-================modal================-*/
+.modal-contenedor{
+    /* background: rgba(240, 237, 237, 0.5); */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    animation: intro-modal .6s ease;
+  }
+  
+  .modal-contenedor::before{
+    color: var(--titulo-color);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    opacity: .5;
+  }
+  
+  .modal-contenido{
+    width: 50%;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  @keyframes intro-modal {
+    from{
+      opacity: 0;
+      transform: translate3d(0,0,0) scale(0.3);
+    }
+  }
+
+.card-product{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: snow;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.card-product::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #2196f3;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+.card-product:hover::before{
+    top:-70%;
+    transform: skewY(390deg) ;
+}
+.card-product::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.card-product .imgBx{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+.card-product .imgBx img{
+    max-width: 100%;
+    transition: 0.5s;
+}
+.card-product:hover .imgBx img{
+    max-width: 50%;
+}
+.card-product .contentBx{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+.card-product .contentBx h3{
+    font-size: 20px;
+    color: black;
+}
+
+.card-product .option-card{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content:space-between;
+}
+.card-product .option-card button{
+    font-size: 1rem;
+}

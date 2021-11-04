@@ -1,0 +1,16 @@
+### new user
+POST http://localhost:3000/api/v1/user/newuser
+Content-Type: application/json
+
+{
+    "username":"kpilo",
+    "password":"password"
+}
+### new user
+POST http://localhost:3000/api/v1/user
+Content-Type: application/json
+
+{
+    "username":"kpilo",
+    "password":"password"
+}
